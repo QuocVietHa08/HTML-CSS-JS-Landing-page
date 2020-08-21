@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+}
+.wrapper {
+  height: 90vh;
+  width: 80vw;
+  max-width: 1100px;
+  margin: 1rem auto;
+  background: #09203f;
+  background-image: linear-gradient(to top, #7028e4 0%, #e5b2ca 100%);
+  box-shadow: 1px 3px 20px rgba(0, 0, 0, 0);
+  border-radius: 0.2rem;
+  position: relative;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  overflow: hidden;
+  height: 100%;
+}
+.container .title {
+  width: 90%;
+  height: 20%;
+  text-align: center;
+  margin: 9rem 0;
+  padding: 2rem;
+}
+.container h1 {
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 3rem;
+  color: aliceblue;
+}
+.container p {
+  font-family: 'Muli', sans-serif;
+  color: #ececf0bd;
+}
+button {
+  font-family: 'Muli', sans-serif;
+  font-size: 1rem;
+  padding: 0.8rem 2.4rem;
+  margin: 0.1rem;
+  border: 0;
+  border-radius: 3rem;
+  cursor: pointer;
+}
+/* car animation effect */
+.view {
+  margin: 0;
+  background-image: linear-gradient(
+    to top,
+    #1e3c72 0%,
+    #1e3c72 1%,
+    #2a5298 100%
+  );
+  overflow-y: hidden;
+}
+.night {
+  height: 560px;
+  width: 700px;
+  border: 1px solid black;
+  background: url(./assets/background.png);
+  background-size: cover;
+  position: relative;
+  box-shadow: 1px 2px 60px rgba(0, 0, 0, 0.4);
+  overflow-x: hidden;
+}
+.surface {
+  height: 140px;
+  width: 500%;
+  background: url(./assets/Img_02.png);
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-repeat: repeat-x;
+  animation: moveRight 6s linear infinite;
+}
+.car {
+  position: absolute;
+  bottom: 43px;
+  left: 24%;
+  animation: upAndDown 1s linear infinite;
+}
+.moveRight {
+  animation: moveRight 6s linear infinite;
+}
+.upAndDown {
+  animation: upAndDown 1s linear infinite;
+}
+/* animation */
+@keyframes moveRight {
+  100% {
+    transform: translateX(-2950px);
+  }
+}
+@keyframes upAndDown {
+  100% {
+    transform: translateY(-1px);
+  }
+  50% {
+    transform: translateY(2px);
+  }
+  0% {
+    transform: translateY(-1px);
+  }
+}
+/* clip path section  */
+.clip-svg {
+  clip-path: url(#myclip);
+}
